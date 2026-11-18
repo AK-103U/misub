@@ -1,0 +1,4 @@
+# Local development only: copy to .dev.vars and choose an admin password.
+# COOKIE_SECRET is optional when KV is bound.
+ADMIN_PASSWORD=
+COOKIE_SECRET=

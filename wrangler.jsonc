@@ -1,0 +1,14 @@
+{
+    "$schema": "./node_modules/wrangler/config-schema.json",
+    "name": "misub",
+    "main": "worker/index.js",
+    "compatibility_date": "2025-09-01",
+    "compatibility_flags": ["nodejs_compat"],
+    "assets": {
+        "directory": "./dist",
+        "binding": "ASSETS",
+        // Login, disguise and subscription routes must run before static asset handling.
+        "run_worker_first": true
+    },
+    "kv_namespaces": [{ "binding": "MISUB_KV","id": "ce3ffa2e6ba04f128583da12b1291a38" }]
+}
